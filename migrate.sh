@@ -1,7 +1,7 @@
 #!/bin/bash
 #COMMANDS & CONSTANTS
-S_OR="ripolles"
-S_DE="arizona"
+S_OR="origin_server"
+S_DE="destin_server"
 FS_MOUNT="/migration"
 S_LIST="$S_OR $S_DE"
 mounted=0
