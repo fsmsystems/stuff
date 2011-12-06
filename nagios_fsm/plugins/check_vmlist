@@ -1,0 +1,9 @@
+#!/bin/sh
+STATE_DEPENDENT=4
+STATE_UNKNOWN=3
+STATE_OK=0
+STATE_WARNING=1
+STATE_CRITICAL=2
+RESP=`echo "listvms"|/usr/bin/vmware-cmd  -i  | awk '{print $2,$3,","}'`
+echo "VM Running and status: "$RESP
+exit $STATE_OK

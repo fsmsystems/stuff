@@ -1,0 +1,27 @@
+#!/bin/bash
+# Created by Ricardo Alias
+RAID_PATH=/usr/RaidMan
+SUDO_PATH=/usr/bin/sudo
+CONTROLLER=1
+AD_STATUS=`$SUDO_PATH $RAID_PATH/arcconf getconfig $CONTROLLER AD |grep "Controller Status" |grep "Okay" |wc -l`
+LD_STATUS=`$SUDO_PATH $RAID_PATH/arcconf getconfig $CONTROLLER LD |grep "Status of logical drive" |grep "Okay" |wc -l`
+PD_STATUS=`$SUDO_PATH $RAID_PATH/arcconf getconfig $CONTROLLER PD |grep "State" |grep "Online" |wc -l`
+        if [ $AD_STATUS -ne 1 ]
+                then
+                        echo "NOK- Adapter Controller Error."
+                        exit 2
+                else
+                        if [ $LD_STATUS -ne 1 ]
+                                then
+                                        echo "NOK - Logical Drive Error."
+                                        exit 2
+                                else
+                                        if [ $PD_STATUS -ne 2 ]
+                                                then
+                                                        echo "NOK - Fisical Drive Error."
+                                                        exit 2
+                                        fi
+                        fi
+        fi
+echo "OK- Array Okay."
+exit 0

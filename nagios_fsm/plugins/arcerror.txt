@@ -1,0 +1,27 @@
+Thu 08Apr2010 (tz=0)
+16:59:52.416143000  arcconf: ArcSystem.cpp: Line #: 71
+                   StorLib::getSystemConfig()
+                       ArcSystem::buildChildren(Ret & retOUT)
+                           *** FSA API Error: FsaEnumAdapters fsaStatus=3 ***
+Thu 08Apr2010 (tz=0)
+16:59:52.421617000  arcconf: ArcSystem.cpp: Line #: 174
+                   ArcSystem::getControllerCount()
+                       *** FSA API Error: FsaEnumAdapters() fsaStatus=3 ***
+Thu 08Apr2010 (tz=0)
+16:59:52.440133000  arcconf: ArcSystem.cpp: Line #: 71
+                   StorLib::getSystemConfig()
+                       ArcSystem::buildChildren(Ret & retOUT)
+                           *** FSA API Error: FsaEnumAdapters fsaStatus=3 ***
+Thu 08Apr2010 (tz=0)
+16:59:52.445411000  arcconf: ArcSystem.cpp: Line #: 174
+                   ArcSystem::getControllerCount()
+                       *** FSA API Error: FsaEnumAdapters() fsaStatus=3 ***
+Thu 08Apr2010 (tz=0)
+16:59:52.546151000  arcconf: ArcSystem.cpp: Line #: 71
+                   StorLib::getSystemConfig()
+                       ArcSystem::buildChildren(Ret & retOUT)
+                           *** FSA API Error: FsaEnumAdapters fsaStatus=3 ***
+Thu 08Apr2010 (tz=0)
+16:59:52.551348000  arcconf: ArcSystem.cpp: Line #: 174
+                   ArcSystem::getControllerCount()
+                       *** FSA API Error: FsaEnumAdapters() fsaStatus=3 ***

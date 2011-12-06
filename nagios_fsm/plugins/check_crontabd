@@ -1,0 +1,14 @@
+#!/bin/bash
+STATE_OK=0
+STATE_WARNING=1
+STATE_CRITICAL=2
+
+/etc/init.d/crond status >/dev/null
+if [ $? -eq 0 ] 
+then
+   echo "OK: Cron Service is Running."
+   exit $STATE_OK
+else
+   echo "CRITICAL: Cron Service is Stopped."
+   exit $STATE_CRITICAL
+fi

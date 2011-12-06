@@ -1,0 +1,19 @@
+#!/bin/sh
+STATE_DEPENDENT=4
+STATE_UNKNOWN=3
+STATE_OK=0
+STATE_WARNING=1
+STATE_CRITICAL=2
+
+CPU_LIMIT=5
+
+CPU_IDLE=`vmstat 5 2 | tail -1 | awk {'print $15'}`
+
+if [ $CPU_IDLE -gt $CPU_LIMIT ]
+    then
+        echo "CPU State OK: ${CPU_IDLE}% Free"
+        exit $STATE_OK
+    else
+        echo "CPU State WARNING: ${CPU_IDLE}% Free"
+        exit $STATE_WARNING
+fi

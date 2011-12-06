@@ -1,0 +1,6 @@
+#!/bin/bash
+export LD_LIBRARY_PATH=/usr/lib/vmware-vix/lib
+export VI_USERNAME=root
+export VI_PASSWORD=kalabaza
+/usr/lib/nagios/plugins/check_vmware3.pl
+exit 0
