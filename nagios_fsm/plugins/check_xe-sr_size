@@ -26,4 +26,5 @@ else
 		EXIT=0
 	fi	
 fi
+exit  $EXIT
 
